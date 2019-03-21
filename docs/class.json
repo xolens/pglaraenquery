@@ -1,0 +1,768 @@
+[
+    {
+        "tags": "priority.3",
+        "name": "TableColumn",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "",
+                "required": true,
+                "name": "position",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "tableFieldId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "fieldId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.2",
+        "name": "TableField",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "",
+                "required": true,
+                "name": "maxRecords",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "fieldId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.1",
+        "name": "Field",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "enum",
+                "tags": "type.FieldType",
+                "required": true,
+                "name": "type",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": true,
+                "name": "displayText",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "boolean",
+                "tags": "",
+                "required": true,
+                "name": "required",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "Json",
+                "tags": "",
+                "required": false,
+                "name": "valueList",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.2",
+        "name": "FieldValue",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "sectionFieldId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.1",
+        "name": "Participant",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.3",
+        "name": "SectionField",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "",
+                "required": true,
+                "name": "position",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "fieldId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "sectionId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.3",
+        "name": "FormSection",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "",
+                "required": true,
+                "name": "position",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "sectionId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "formId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.1",
+        "name": "Form",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.2",
+        "name": "Section",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.3",
+        "name": "ParticipantEnquiry",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "participantId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "enquiryId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "enum",
+                "tags": "type.ParticipantEnquiryState",
+                "required": false,
+                "name": "state",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "timestamp",
+                "tags": "",
+                "required": true,
+                "name": "createTime",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "timestamp",
+                "tags": "",
+                "required": false,
+                "name": "updateTime",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "timestamp",
+                "tags": "",
+                "required": false,
+                "name": "validationTime",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.2",
+        "name": "GroupParticipant",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "groupId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.1",
+        "name": "Group",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    },
+    {
+        "tags": "priority.2",
+        "name": "Enquiry",
+        "stereotype": null,
+        "visibility": "public",
+        "isAbstract": false,
+        "operations": [],
+        "attributes": [
+            {
+                "type": "increments",
+                "tags": "",
+                "required": true,
+                "name": "id",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "name",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "flex.1 embeddable",
+                "required": true,
+                "name": "title",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "string",
+                "tags": "",
+                "required": false,
+                "name": "description",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "groupId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            },
+            {
+                "type": "integer",
+                "tags": "index",
+                "required": true,
+                "name": "formId",
+                "visibility": "private",
+                "aggregation": "none",
+                "defaultValue": "",
+                "isReadOnly": false,
+                "isStatic": false,
+                "isUnique": false
+            }
+        ]
+    }
+]

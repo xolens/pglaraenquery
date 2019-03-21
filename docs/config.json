@@ -1,0 +1,13 @@
+{
+    "author.name":"Xolens",
+    "author.email":"xolens.official@gmail.com",
+    "package.name":"xolens/pglaraenquery",
+    "package.description":"Laravel advanced survey repository package.",
+    "package.laravel.base":"PgLaraenquery",
+    "package.author.base":"Xolens",
+    "package.laravel.provider":"PgLaraenqueryProvider",
+    "config.output.dir":"./source/output/extjs",
+    "config.output.dir.extjs":"./source/output/",
+    "config.output.dir.php":"/var/www/repositories/xolens.laravel/local/pglaraenquery/",
+    "repositories.local.url":"/var/www/repositories/xolens.laravel/local/*"
+}

@@ -1,0 +1,32 @@
+{
+    "name": "xolens/pglaraenquery",
+    "description": "Laravel advanced survey repository package.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Xolens",
+        "email": "xolens.official@gmail.com"
+    }],
+    "require": {
+        "xolens/pglarautil": "1.0.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~3.4.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PgLaraenqueryProvider"
+            ]
+        }
+    },
+    "repositories": [{
+        "type": "path",
+        "url": "/var/www/repositories/xolens.laravel/local/*"
+    }]
+}

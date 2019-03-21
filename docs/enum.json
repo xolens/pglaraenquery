@@ -1,0 +1,27 @@
+[
+    {
+        "name": "FieldType",
+        "visibility": "public",
+        "literals": [
+            "CHECKBOX",
+            "COMBOBOX",
+            "DATEPICKER",
+            "NUMBERFIELD",
+            "RADIOGROUP",
+            "SPINNER",
+            "TABLE",
+            "TEXTFIELD",
+            "TEXTAREA",
+            "TIMEFIELD"
+        ]
+    },
+    {
+        "name": "ParticipantEnquiryState",
+        "visibility": "public",
+        "literals": [
+            "CREATED",
+            "UPDATED",
+            "VALIDATED"
+        ]
+    }
+]
