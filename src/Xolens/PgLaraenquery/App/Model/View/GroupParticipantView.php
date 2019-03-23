@@ -3,11 +3,11 @@
 namespace Xolens\PgLaraenquery\App\Model\View;
 use Illuminate\Database\Eloquent\Model;
 
-use PgLaraenqueryCreateViewField;
+use PgLaraenqueryCreateViewGroupParticipant;
 
 
 
-class Field extends Model
+class GroupParticipantView extends Model
 {
     public $timestamps = false;
 
@@ -26,7 +26,7 @@ class Field extends Model
     protected $table;
     
     function __construct(array $attributes = []) {
-        $this->table = PgLaraenqueryCreateViewField::table();
+        $this->table = PgLaraenqueryCreateViewGroupParticipant::table();
         parent::__construct($attributes);
     }
 }

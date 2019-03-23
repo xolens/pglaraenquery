@@ -10,7 +10,7 @@ final class CleanSchemaTest extends CleanSchemaBase
     protected function getPackageProviders($app): array{
         return [
             'Xolens\PgLarautil\PgLarautilServiceProvider',
-            'Xolens\PgLaraenquery\App\PgLaraenqueryServiceProvider',
+            'Xolens\PgLaraenquery\PgLaraenqueryServiceProvider',
         ];
     }
 }

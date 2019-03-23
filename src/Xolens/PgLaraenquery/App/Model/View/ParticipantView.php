@@ -7,7 +7,7 @@ use PgLaraenqueryCreateViewParticipant;
 
 
 
-class Participant extends Model
+class ParticipantView extends Model
 {
     public $timestamps = false;
 

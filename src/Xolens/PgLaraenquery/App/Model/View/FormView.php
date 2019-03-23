@@ -7,7 +7,7 @@ use PgLaraenqueryCreateViewForm;
 
 
 
-class Form extends Model
+class FormView extends Model
 {
     public $timestamps = false;
 

@@ -8,7 +8,7 @@
         "email": "xolens.official@gmail.com"
     }],
     "require": {
-        "xolens/pglarautil": "1.0.0"
+        "xolens/pglarautil": "dev-master"
     },
     "require-dev": {
         "orchestra/testbench": "~3.4.0"
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PgLaraenqueryProvider"
+                "Xolens\\PgLaraenquery\\PgLaraenqueryServiceProvider"
             ]
         }
     },

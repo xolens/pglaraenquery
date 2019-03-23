@@ -3,11 +3,11 @@
 namespace Xolens\PgLaraenquery\App\Model\View;
 use Illuminate\Database\Eloquent\Model;
 
-use PgLaraenqueryCreateViewSection;
+use PgLaraenqueryCreateViewTableColumn;
 
 
 
-class Section extends Model
+class TableColumnView extends Model
 {
     public $timestamps = false;
 
@@ -26,7 +26,7 @@ class Section extends Model
     protected $table;
     
     function __construct(array $attributes = []) {
-        $this->table = PgLaraenqueryCreateViewSection::table();
+        $this->table = PgLaraenqueryCreateViewTableColumn::table();
         parent::__construct($attributes);
     }
 }

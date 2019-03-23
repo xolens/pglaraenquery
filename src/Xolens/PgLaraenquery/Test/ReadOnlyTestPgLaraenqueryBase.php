@@ -17,7 +17,7 @@ abstract class ReadOnlyTestPgLaraenqueryBase extends TestCase
 
     protected function getPackageProviders($app): array{
         return [
-            'Xolens\PgLaraenquery\App\PgLaraenqueryServiceProvider',
+            'Xolens\PgLaraenquery\PgLaraenqueryServiceProvider',
         ];
     }
 }

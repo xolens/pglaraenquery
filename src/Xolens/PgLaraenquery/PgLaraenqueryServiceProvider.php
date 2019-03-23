@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolens\PgLaraenquery\App;
+namespace Xolens\PgLaraenquery;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;

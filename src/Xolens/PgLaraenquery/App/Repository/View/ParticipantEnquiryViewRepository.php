@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolens\PgLaraenquery\App\Repository;
+namespace Xolens\PgLaraenquery\App\Repository\View;
 
 use Xolens\PgLaraenquery\App\Model\ParticipantEnquiry;
 use Xolens\PgLaraenquery\App\Model\View\ParticipantEnquiryView;

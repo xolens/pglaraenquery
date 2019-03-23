@@ -3,11 +3,11 @@
 namespace Xolens\PgLaraenquery\App\Model\View;
 use Illuminate\Database\Eloquent\Model;
 
-use PgLaraenqueryCreateViewTableField;
+use PgLaraenqueryCreateViewFormSection;
 
 
 
-class TableField extends Model
+class FormSectionView extends Model
 {
     public $timestamps = false;
 
@@ -26,7 +26,7 @@ class TableField extends Model
     protected $table;
     
     function __construct(array $attributes = []) {
-        $this->table = PgLaraenqueryCreateViewTableField::table();
+        $this->table = PgLaraenqueryCreateViewFormSection::table();
         parent::__construct($attributes);
     }
 }

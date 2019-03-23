@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolens\PgLaraenquery\App\Repository;
+namespace Xolens\PgLaraenquery\App\Repository\View;
 
 use Xolens\PgLaraenquery\App\Model\Group;
 use Xolens\PgLaraenquery\App\Model\View\GroupView;

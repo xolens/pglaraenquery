@@ -1,6 +1,6 @@
 <?php
 
-namespace Xolens\PgLaraenquery\App\Repository;
+namespace Xolens\PgLaraenquery\App\Repository\View;
 
 use Xolens\PgLarautil\App\Repository\ReadableRepositoryContract;
 use Xolens\PgLarautil\App\Util\Model\Filterer;
