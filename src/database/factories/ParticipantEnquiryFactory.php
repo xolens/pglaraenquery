@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-use Xolens\PgLaraenquery\App\Model\ParticipantEnquiry;
+use Xolens\PgLaraenquiry\App\Model\ParticipantEnquiry;
 
 $factory->define(ParticipantEnquiry::class, function (Faker $faker) {
     return [

@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-use Xolens\PgLaraenquery\App\Model\FieldValue;
+use Xolens\PgLaraenquiry\App\Model\FieldValue;
 
 $factory->define(FieldValue::class, function (Faker $faker) {
     return [

@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-use Xolens\PgLaraenquery\App\Model\Group;
+use Xolens\PgLaraenquiry\App\Model\Group;
 
 $factory->define(Group::class, function (Faker $faker) {
     return [

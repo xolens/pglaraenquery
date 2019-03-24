@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-use Xolens\PgLaraenquery\App\Model\FormSection;
+use Xolens\PgLaraenquiry\App\Model\FormSection;
 
 $factory->define(FormSection::class, function (Faker $faker) {
     return [

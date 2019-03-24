@@ -1,5 +1,5 @@
 {
-    "name": "xolens/pglaraenquery",
+    "name": "xolens/pglaraenquiry",
     "description": "Laravel advanced survey repository package.",
     "type": "library",
     "license": "MIT",
@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Xolens\\PgLaraenquery\\PgLaraenqueryServiceProvider"
+                "Xolens\\PgLaraenquiry\\PgLaraenquiryServiceProvider"
             ]
         }
     },

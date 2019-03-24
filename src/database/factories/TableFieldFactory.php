@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-use Xolens\PgLaraenquery\App\Model\TableField;
+use Xolens\PgLaraenquiry\App\Model\TableField;
 
 $factory->define(TableField::class, function (Faker $faker) {
     return [

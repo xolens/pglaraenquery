@@ -1,7 +1,7 @@
 <?php
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-use Xolens\PgLaraenquery\App\Model\TableColumn;
+use Xolens\PgLaraenquiry\App\Model\TableColumn;
 
 $factory->define(TableColumn::class, function (Faker $faker) {
     return [
