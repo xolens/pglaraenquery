@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 use Xolens\PgLaraenquiry\App\Util\PgLaraenquiryMigration;
 
-class PgLaraenquiryCreateTableParticipant extends PgLaraenquiryMigration
+class PgLaraenquiryCreateTableForm extends PgLaraenquiryMigration
 {
     /**
      * Return table name
@@ -14,7 +14,7 @@ class PgLaraenquiryCreateTableParticipant extends PgLaraenquiryMigration
      * @return string
      */
     public static function tableName(){
-        return 'participant';
+        return 'form';
     }    
 
     /**
@@ -28,6 +28,7 @@ class PgLaraenquiryCreateTableParticipant extends PgLaraenquiryMigration
             $table->increments('id');
             $table->string('name');
             $table->string('description')->nullable();
+            $table->integer('primary_section_id')->index();
         });
         if(self::logEnabled()){
             self::registerForLog();

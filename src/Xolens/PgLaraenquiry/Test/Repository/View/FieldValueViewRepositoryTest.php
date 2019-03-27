@@ -24,8 +24,11 @@ final class FieldValueViewRepositoryTest extends WritableTestPgLaraenquiryBase
     public function test_make(){
         $i = rand(0, 10000);
         $sectionFieldId = $this->sectionFieldRepo->model()::inRandomOrder()->first()->id;
+        $enquiryId = $this->enquiryRepo->model()::inRandomOrder()->first()->id;
         $item = $this->repository()->make([
             'section_field_id' => $sectionFieldId,
+            'enquiry_id' => $enquiryId,
+            'value' => 'value'.$i,
         ]);
         $this->assertTrue(true);
     }
@@ -50,8 +53,11 @@ final class FieldValueViewRepositoryTest extends WritableTestPgLaraenquiryBase
         
         for($i=$count; $i<($toGenerateCount+$count); $i++){
             $sectionFieldId = $this->sectionFieldRepo->model()::inRandomOrder()->first()->id;
+            $enquiryId = $this->enquiryRepo->model()::inRandomOrder()->first()->id;
             $item = $this->repository()->create([
                 'section_field_id' => $sectionFieldId,
+                'enquiry_id' => $enquiryId,
+                'value' => 'value'.$i,
             ]);
             $generatedItemsId[] = $item->response()->id;
         }

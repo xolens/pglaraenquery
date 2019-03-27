@@ -9,6 +9,7 @@ use PgLaraenquiryCreateTableFieldValue;
 class FieldValue extends Model
 {
     public const SECTION_FIELD_PROPERTY = 'section_field_id';
+    public const ENQUIRY_PROPERTY = 'enquiry_id';
 
     public $timestamps = false;
 
@@ -18,7 +19,7 @@ class FieldValue extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'section_field_id', 
+        'id', 'section_field_id', 'enquiry_id', 'value', 
     ];
 
     /**
@@ -35,5 +36,9 @@ class FieldValue extends Model
 
     public function sectionField(){
         return $this->belongsTo('SectionField','section_field_id');
+    } 
+
+    public function enquiry(){
+        return $this->belongsTo('Enquiry','enquiry_id');
     } 
 }

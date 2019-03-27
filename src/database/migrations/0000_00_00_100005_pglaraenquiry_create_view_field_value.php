@@ -22,12 +22,16 @@ class PgLaraenquiryCreateViewFieldValue extends PgLaraenquiryMigration
     public function up()
     {
         $mainTable = PgLaraenquiryCreateTableFieldValue::table();
+        $enquiryTable = PgLaraenquiryCreateTableEnquiry::table();
         $sectionFieldTable = PgLaraenquiryCreateTableSectionField::table();
         DB::statement("
             CREATE VIEW ".self::table()." AS(
                 SELECT 
-                    ".$mainTable.".*
+                    ".$mainTable.".*,
+                    ".$enquiryTable.".name as enquiry_name,
+                    ".$enquiryTable.".title as enquiry_title
                 FROM ".$mainTable." 
+                    LEFT JOIN ".$enquiryTable." ON ".$enquiryTable.".id = ".$mainTable.".enquiry_id
                     LEFT JOIN ".$sectionFieldTable." ON ".$sectionFieldTable.".id = ".$mainTable.".section_field_id
             )
         ");

@@ -8,6 +8,7 @@ use PgLaraenquiryCreateTableForm;
 
 class Form extends Model
 {
+    public const PRIMARY_SECTION_PROPERTY = 'primary_section_id';
 
     public $timestamps = false;
 
@@ -17,7 +18,7 @@ class Form extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'name', 'description', 
+        'id', 'name', 'description', 'primary_section_id', 
     ];
 
     /**
@@ -31,4 +32,8 @@ class Form extends Model
         $this->table = PgLaraenquiryCreateTableForm::table();
         parent::__construct($attributes);
     }
+
+    public function primarySection(){
+        return $this->belongsTo('PrimarySection','primary_section_id');
+    } 
 }

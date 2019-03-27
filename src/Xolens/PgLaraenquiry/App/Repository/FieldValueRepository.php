@@ -16,9 +16,10 @@ class FieldValueRepository extends AbstractWritableRepository implements FieldVa
     public function validationRules(array $data){
         $id = self::get($data,'id');
         $sectionFieldId = self::get($data,'section_field_id');
+        $enquiryId = self::get($data,'enquiry_id');
         return [
-            'id' => ['required',Rule::unique(PgLaraenquiryCreateTableFieldValue::table())->where(function ($query) use($id, $sectionFieldId) {
-                return $query->where('id','!=', $id)->where('section_field_id', $sectionFieldId);
+            'id' => ['required',Rule::unique(PgLaraenquiryCreateTableFieldValue::table())->where(function ($query) use($id, $sectionFieldId, $enquiryId) {
+                return $query->where('id','!=', $id)->where('section_field_id', $sectionFieldId)->where('enquiry_id', $enquiryId);
             })],
         ];
     }

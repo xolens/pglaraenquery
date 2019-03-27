@@ -23,9 +23,11 @@ final class FormViewRepositoryTest extends WritableTestPgLaraenquiryBase
      */
     public function test_make(){
         $i = rand(0, 10000);
+        $primarySectionId = $this->primarySectionRepo->model()::inRandomOrder()->first()->id;
         $item = $this->repository()->make([
             'name' => 'name'.$i,
             'description' => 'description'.$i,
+            'primary_section_id' => $primarySectionId,
         ]);
         $this->assertTrue(true);
     }
@@ -49,9 +51,11 @@ final class FormViewRepositoryTest extends WritableTestPgLaraenquiryBase
         $generatedItemsId = [];
         
         for($i=$count; $i<($toGenerateCount+$count); $i++){
+            $primarySectionId = $this->primarySectionRepo->model()::inRandomOrder()->first()->id;
             $item = $this->repository()->create([
                 'name' => 'name'.$i,
                 'description' => 'description'.$i,
+                'primary_section_id' => $primarySectionId,
             ]);
             $generatedItemsId[] = $item->response()->id;
         }

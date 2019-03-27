@@ -17,34 +17,26 @@
             <file>src/Xolens/PgLaraenquiry/Test/CleanSchemaTest.php</file>
         </testsuite> 
         <testsuite name="test-repository">
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/GroupRepositoryTest.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/FormRepositoryTest.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/FieldRepositoryTest.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/ParticipantRepositoryTest.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/GroupParticipantRepositoryTest.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/TableFieldRepositoryTest.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/SectionRepositoryTest.php</file>
+            <file>src/Xolens/PgLaraenquiry/Test/Repository/FormRepositoryTest.php</file>
+            <file>src/Xolens/PgLaraenquiry/Test/Repository/TableFieldRepositoryTest.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/EnquiryRepositoryTest.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/FieldValueRepositoryTest.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/FormSectionRepositoryTest.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/ParticipantEnquiryRepositoryTest.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/TableColumnRepositoryTest.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/SectionFieldRepositoryTest.php</file>
+            <file>src/Xolens/PgLaraenquiry/Test/Repository/FieldValueRepositoryTest.php</file>
         </testsuite>
         <testsuite name="test-view-repository">
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/GroupViewRepository.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/FormViewRepository.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/View/FieldViewRepository.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/ParticipantViewRepository.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/GroupParticipantViewRepository.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/TableFieldViewRepository.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/View/SectionViewRepository.php</file>
+            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/FormViewRepository.php</file>
+            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/TableFieldViewRepository.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/View/EnquiryViewRepository.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/FieldValueViewRepository.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/View/FormSectionViewRepository.php</file>
-            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/ParticipantEnquiryViewRepository.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/View/TableColumnViewRepository.php</file>
             <file>src/Xolens/PgLaraenquiry/Test/Repository/View/SectionFieldViewRepository.php</file>
+            <file>src/Xolens/PgLaraenquiry/Test/Repository/View/FieldValueViewRepository.php</file>
         </testsuite> 
     </testsuites>
 </phpunit>

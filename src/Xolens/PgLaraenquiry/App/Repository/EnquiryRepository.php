@@ -15,11 +15,10 @@ class EnquiryRepository extends AbstractWritableRepository implements EnquiryRep
     /*
     public function validationRules(array $data){
         $id = self::get($data,'id');
-        $groupId = self::get($data,'group_id');
         $formId = self::get($data,'form_id');
         return [
-            'id' => ['required',Rule::unique(PgLaraenquiryCreateTableEnquiry::table())->where(function ($query) use($id, $groupId, $formId) {
-                return $query->where('id','!=', $id)->where('group_id', $groupId)->where('form_id', $formId);
+            'id' => ['required',Rule::unique(PgLaraenquiryCreateTableEnquiry::table())->where(function ($query) use($id, $formId) {
+                return $query->where('id','!=', $id)->where('form_id', $formId);
             })],
         ];
     }

@@ -29,7 +29,6 @@ class PgLaraenquiryCreateTableEnquiry extends PgLaraenquiryMigration
             $table->string('name');
             $table->string('title');
             $table->string('description')->nullable();
-            $table->integer('group_id')->index();
             $table->integer('form_id')->index();
         });
         if(self::logEnabled()){

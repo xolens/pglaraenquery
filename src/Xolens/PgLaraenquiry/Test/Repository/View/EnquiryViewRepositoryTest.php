@@ -23,13 +23,11 @@ final class EnquiryViewRepositoryTest extends WritableTestPgLaraenquiryBase
      */
     public function test_make(){
         $i = rand(0, 10000);
-        $groupId = $this->groupRepo->model()::inRandomOrder()->first()->id;
         $formId = $this->formRepo->model()::inRandomOrder()->first()->id;
         $item = $this->repository()->make([
             'name' => 'name'.$i,
             'title' => 'title'.$i,
             'description' => 'description'.$i,
-            'group_id' => $groupId,
             'form_id' => $formId,
         ]);
         $this->assertTrue(true);
@@ -54,13 +52,11 @@ final class EnquiryViewRepositoryTest extends WritableTestPgLaraenquiryBase
         $generatedItemsId = [];
         
         for($i=$count; $i<($toGenerateCount+$count); $i++){
-            $groupId = $this->groupRepo->model()::inRandomOrder()->first()->id;
             $formId = $this->formRepo->model()::inRandomOrder()->first()->id;
             $item = $this->repository()->create([
                 'name' => 'name'.$i,
                 'title' => 'title'.$i,
                 'description' => 'description'.$i,
-                'group_id' => $groupId,
                 'form_id' => $formId,
             ]);
             $generatedItemsId[] = $item->response()->id;

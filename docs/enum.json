@@ -14,14 +14,5 @@
             "TEXTAREA",
             "TIMEFIELD"
         ]
-    },
-    {
-        "name": "ParticipantEnquiryState",
-        "visibility": "public",
-        "literals": [
-            "CREATED",
-            "UPDATED",
-            "VALIDATED"
-        ]
     }
 ]

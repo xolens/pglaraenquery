@@ -22,16 +22,13 @@ class PgLaraenquiryCreateViewEnquiry extends PgLaraenquiryMigration
     public function up()
     {
         $mainTable = PgLaraenquiryCreateTableEnquiry::table();
-        $groupTable = PgLaraenquiryCreateTableGroup::table();
         $formTable = PgLaraenquiryCreateTableForm::table();
         DB::statement("
             CREATE VIEW ".self::table()." AS(
                 SELECT 
                     ".$mainTable.".*,
-                    ".$groupTable.".name as group_name,
                     ".$formTable.".name as form_name
                 FROM ".$mainTable." 
-                    LEFT JOIN ".$groupTable." ON ".$groupTable.".id = ".$mainTable.".group_id
                     LEFT JOIN ".$formTable." ON ".$formTable.".id = ".$mainTable.".form_id
             )
         ");

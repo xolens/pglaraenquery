@@ -8,7 +8,6 @@ $factory->define(Enquiry::class, function (Faker $faker) {
         'name' => $faker->name,
         'title' => $faker->name,
         'description' => $faker->name,
-        'group_id' => $faker->randomNumber,
         'form_id' => $faker->randomNumber,
     ];
 });

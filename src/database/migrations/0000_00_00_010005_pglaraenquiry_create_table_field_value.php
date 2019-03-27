@@ -27,6 +27,8 @@ class PgLaraenquiryCreateTableFieldValue extends PgLaraenquiryMigration
         Schema::create(self::table(), function (Blueprint $table) {
             $table->increments('id');
             $table->integer('section_field_id')->index();
+            $table->integer('enquiry_id')->index();
+            $table->string('value')->nullable();
         });
         if(self::logEnabled()){
             self::registerForLog();

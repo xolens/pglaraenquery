@@ -15,9 +15,10 @@ class FormRepository extends AbstractWritableRepository implements FormRepositor
     /*
     public function validationRules(array $data){
         $id = self::get($data,'id');
+        $primarySectionId = self::get($data,'primary_section_id');
         return [
-            'id' => ['required',Rule::unique(PgLaraenquiryCreateTableForm::table())->where(function ($query) use($id) {
-                return $query->where('id','!=', $id);
+            'id' => ['required',Rule::unique(PgLaraenquiryCreateTableForm::table())->where(function ($query) use($id, $primarySectionId) {
+                return $query->where('id','!=', $id)->where('primary_section_id', $primarySectionId);
             })],
         ];
     }

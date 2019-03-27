@@ -24,19 +24,15 @@ class PostByController extends PostController
     
     public function keyMap(){
         return [
-            'group' => 'group_id',
-            'form' => 'form_id',
             'field' => 'field_id',
-            'participant' => 'participant_id',
-            'group_participant' => 'group_participant_id',
-            'table_field' => 'table_field_id',
             'section' => 'section_id',
+            'form' => 'form_id',
+            'table_field' => 'table_field_id',
             'enquiry' => 'enquiry_id',
-            'field_value' => 'field_value_id',
             'form_section' => 'form_section_id',
-            'participant_enquiry' => 'participant_enquiry_id',
             'table_column' => 'table_column_id',
             'section_field' => 'section_field_id',
+            'field_value' => 'field_value_id',
         ];
     }
 }

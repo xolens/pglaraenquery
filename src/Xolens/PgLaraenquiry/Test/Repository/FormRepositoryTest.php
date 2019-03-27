@@ -4,12 +4,14 @@ namespace Xolens\PgLaraenquiry\Test\Repository;
 
 use Xolens\PgLaraenquiry\App\Model\Form;
 use Xolens\PgLaraenquiry\App\Repository\FormRepository;
+use Xolens\PgLaraenquiry\App\Repository\SectionRepository;
 use Xolens\PgLarautil\App\Util\Model\Sorter;
 use Xolens\PgLarautil\App\Util\Model\Filterer;
 use Xolens\PgLaraenquiry\Test\WritableTestPgLaraenquiryBase;
 
 final class FormRepositoryTest extends WritableTestPgLaraenquiryBase
 {
+    protected $primarySectionRepo;
     /**
      * Setup the test environment.
      */
@@ -17,6 +19,7 @@ final class FormRepositoryTest extends WritableTestPgLaraenquiryBase
         parent::setUp();
         $this->artisan('migrate');
         $repo = new FormRepository();
+        $this->primarySectionRepo = new SectionRepository();
         $this->repo = $repo;
     }
 
@@ -24,7 +27,10 @@ final class FormRepositoryTest extends WritableTestPgLaraenquiryBase
      * @test
      */
     public function test_make(){
-        $item = factory(Form::class)->make();
+        $primarySectionId = $this->primarySectionRepo->model()::inRandomOrder()->first()->id;
+        $item = factory(Form::class)->make([
+            'primary_section_id' => $primarySectionId,
+        ]);
         $this->assertTrue(true);
     }
     
@@ -46,7 +52,10 @@ final class FormRepositoryTest extends WritableTestPgLaraenquiryBase
         $count = $this->repository()->count()->response();
         $generatedItemsId = [];
         for($i=$count; $i<($toGenerateCount+$count); $i++){
-            $data = factory(Form::class)->make();
+            $primarySectionId = $this->primarySectionRepo->model()::inRandomOrder()->first()->id;
+            $data = factory(Form::class)->make([
+                'primary_section_id' => $primarySectionId,
+            ]);
             $item = $this->repository()->create($data);
             $generatedItemsId[] = $item->response()->id;
         }

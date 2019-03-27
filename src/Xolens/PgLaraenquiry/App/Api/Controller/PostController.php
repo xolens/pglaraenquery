@@ -7,19 +7,15 @@ use Xolens\PgLarautil\App\Api\Controller\BaseController;
 use Validator;
 
 
-use Xolens\PgLaraenquiry\App\Repository\GroupRepository;
-use Xolens\PgLaraenquiry\App\Repository\FormRepository;
 use Xolens\PgLaraenquiry\App\Repository\FieldRepository;
-use Xolens\PgLaraenquiry\App\Repository\ParticipantRepository;
-use Xolens\PgLaraenquiry\App\Repository\GroupParticipantRepository;
-use Xolens\PgLaraenquiry\App\Repository\TableFieldRepository;
 use Xolens\PgLaraenquiry\App\Repository\SectionRepository;
+use Xolens\PgLaraenquiry\App\Repository\FormRepository;
+use Xolens\PgLaraenquiry\App\Repository\TableFieldRepository;
 use Xolens\PgLaraenquiry\App\Repository\EnquiryRepository;
-use Xolens\PgLaraenquiry\App\Repository\FieldValueRepository;
 use Xolens\PgLaraenquiry\App\Repository\FormSectionRepository;
-use Xolens\PgLaraenquiry\App\Repository\ParticipantEnquiryRepository;
 use Xolens\PgLaraenquiry\App\Repository\TableColumnRepository;
 use Xolens\PgLaraenquiry\App\Repository\SectionFieldRepository;
+use Xolens\PgLaraenquiry\App\Repository\FieldValueRepository;
 
 class PostController extends BaseController
 {
@@ -28,19 +24,15 @@ class PostController extends BaseController
     public static function map(){
         if(self::$map==null){
             self::$map =[
-                'group' => ['repository' => new GroupRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
-                'form' => ['repository' => new FormRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
                 'field' => ['repository' => new FieldRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
-                'participant' => ['repository' => new ParticipantRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
-                'groupparticipant' => ['repository' => new GroupParticipantRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
-                'tablefield' => ['repository' => new TableFieldRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
                 'section' => ['repository' => new SectionRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
+                'form' => ['repository' => new FormRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
+                'tablefield' => ['repository' => new TableFieldRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
                 'enquiry' => ['repository' => new EnquiryRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
-                'fieldvalue' => ['repository' => new FieldValueRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
                 'formsection' => ['repository' => new FormSectionRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
-                'participantenquiry' => ['repository' => new ParticipantEnquiryRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
                 'tablecolumn' => ['repository' => new TableColumnRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
                 'sectionfield' => ['repository' => new SectionFieldRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
+                'fieldvalue' => ['repository' => new FieldValueRepository(),'ACTION' => ['STORE','UPDATE','DELETE'] ],
             ];
         }
         return self::$map;

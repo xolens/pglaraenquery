@@ -22,17 +22,17 @@ class PgLaraenquiryCreateViewFormSection extends PgLaraenquiryMigration
     public function up()
     {
         $mainTable = PgLaraenquiryCreateTableFormSection::table();
-        $formTable = PgLaraenquiryCreateTableForm::table();
         $sectionTable = PgLaraenquiryCreateTableSection::table();
+        $formTable = PgLaraenquiryCreateTableForm::table();
         DB::statement("
             CREATE VIEW ".self::table()." AS(
                 SELECT 
                     ".$mainTable.".*,
-                    ".$formTable.".name as form_name,
-                    ".$sectionTable.".name as section_name
+                    ".$sectionTable.".name as section_name,
+                    ".$formTable.".name as form_name
                 FROM ".$mainTable." 
-                    LEFT JOIN ".$formTable." ON ".$formTable.".id = ".$mainTable.".form_id
                     LEFT JOIN ".$sectionTable." ON ".$sectionTable.".id = ".$mainTable.".section_id
+                    LEFT JOIN ".$formTable." ON ".$formTable.".id = ".$mainTable.".form_id
             )
         ");
     }
