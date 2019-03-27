@@ -79,7 +79,7 @@
             },
             {
                 "type": "string",
-                "tags": "flex.1 embeddable",
+                "tags": "unique flex.1 embeddable",
                 "required": true,
                 "name": "name",
                 "visibility": "private",
@@ -148,10 +148,10 @@
                 "isUnique": false
             },
             {
-                "type": "enum",
-                "tags": "type.FieldType",
+                "type": "string",
+                "tags": "unique flex.1 embeddable",
                 "required": true,
-                "name": "type",
+                "name": "name",
                 "visibility": "private",
                 "aggregation": "none",
                 "defaultValue": "",
@@ -160,10 +160,10 @@
                 "isUnique": false
             },
             {
-                "type": "string",
-                "tags": "flex.1 embeddable",
+                "type": "enum",
+                "tags": "type.FieldType",
                 "required": true,
-                "name": "name",
+                "name": "type",
                 "visibility": "private",
                 "aggregation": "none",
                 "defaultValue": "",
@@ -417,7 +417,7 @@
             },
             {
                 "type": "string",
-                "tags": "flex.1 embeddable",
+                "tags": "unique flex.1 embeddable",
                 "required": true,
                 "name": "name",
                 "visibility": "private",
@@ -475,7 +475,7 @@
             },
             {
                 "type": "string",
-                "tags": "flex.1 embeddable",
+                "tags": "unique flex.1 embeddable",
                 "required": true,
                 "name": "name",
                 "visibility": "private",
@@ -521,7 +521,7 @@
             },
             {
                 "type": "string",
-                "tags": "flex.1 embeddable",
+                "tags": "unique flex.1 embeddable",
                 "required": true,
                 "name": "name",
                 "visibility": "private",

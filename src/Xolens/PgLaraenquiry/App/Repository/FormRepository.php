@@ -20,6 +20,9 @@ class FormRepository extends AbstractWritableRepository implements FormRepositor
             'id' => ['required',Rule::unique(PgLaraenquiryCreateTableForm::table())->where(function ($query) use($id, $primarySectionId) {
                 return $query->where('id','!=', $id)->where('primary_section_id', $primarySectionId);
             })],
+            'name' => [Rule::unique(PgLaraenquiryCreateTableForm::table())->where(function ($query) use($id, $primarySectionId) {
+                return $query->where('id','!=', $id)->where('primary_section_id', $primarySectionId);
+            })],
         ];
     }
     //*/

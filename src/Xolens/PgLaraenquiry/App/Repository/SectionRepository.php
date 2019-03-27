@@ -19,6 +19,9 @@ class SectionRepository extends AbstractWritableRepository implements SectionRep
             'id' => ['required',Rule::unique(PgLaraenquiryCreateTableSection::table())->where(function ($query) use($id) {
                 return $query->where('id','!=', $id);
             })],
+            'name' => [Rule::unique(PgLaraenquiryCreateTableSection::table())->where(function ($query) use($id) {
+                return $query->where('id','!=', $id);
+            })],
         ];
     }
     //*/

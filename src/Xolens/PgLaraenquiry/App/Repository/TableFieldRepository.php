@@ -20,6 +20,9 @@ class TableFieldRepository extends AbstractWritableRepository implements TableFi
             'id' => ['required',Rule::unique(PgLaraenquiryCreateTableTableField::table())->where(function ($query) use($id, $fieldId) {
                 return $query->where('id','!=', $id)->where('field_id', $fieldId);
             })],
+            'name' => [Rule::unique(PgLaraenquiryCreateTableTableField::table())->where(function ($query) use($id, $fieldId) {
+                return $query->where('id','!=', $id)->where('field_id', $fieldId);
+            })],
         ];
     }
     //*/

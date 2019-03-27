@@ -20,6 +20,9 @@ class EnquiryRepository extends AbstractWritableRepository implements EnquiryRep
             'id' => ['required',Rule::unique(PgLaraenquiryCreateTableEnquiry::table())->where(function ($query) use($id, $formId) {
                 return $query->where('id','!=', $id)->where('form_id', $formId);
             })],
+            'name' => [Rule::unique(PgLaraenquiryCreateTableEnquiry::table())->where(function ($query) use($id, $formId) {
+                return $query->where('id','!=', $id)->where('form_id', $formId);
+            })],
         ];
     }
     //*/

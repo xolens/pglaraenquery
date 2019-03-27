@@ -26,8 +26,8 @@ class PgLaraenquiryCreateTableField extends PgLaraenquiryMigration
     {
         Schema::create(self::table(), function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name')->unique();
             $table->enum('type',['CHECKBOX', 'COMBOBOX', 'DATEPICKER', 'NUMBERFIELD', 'RADIOGROUP', 'SPINNER', 'TABLE', 'TEXTFIELD', 'TEXTAREA', 'TIMEFIELD']);
-            $table->string('name');
             $table->string('display_text');
             $table->boolean('required');
             $table->json('value_list')->nullable();

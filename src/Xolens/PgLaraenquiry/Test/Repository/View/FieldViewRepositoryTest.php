@@ -24,8 +24,8 @@ final class FieldViewRepositoryTest extends WritableTestPgLaraenquiryBase
     public function test_make(){
         $i = rand(0, 10000);
         $item = $this->repository()->make([
-            'type' => 'type'.$i,
             'name' => 'name'.$i,
+            'type' => 'type'.$i,
             'display_text' => 'displayText'.$i,
             'required' => 'required'.$i,
             'value_list' => 'valueList'.$i,
@@ -54,8 +54,8 @@ final class FieldViewRepositoryTest extends WritableTestPgLaraenquiryBase
         
         for($i=$count; $i<($toGenerateCount+$count); $i++){
             $item = $this->repository()->create([
-                'type' => 'type'.$i,
                 'name' => 'name'.$i,
+                'type' => 'type'.$i,
                 'display_text' => 'displayText'.$i,
                 'required' => $i%2==0,
                 'value_list' => 'valueList'.$i,

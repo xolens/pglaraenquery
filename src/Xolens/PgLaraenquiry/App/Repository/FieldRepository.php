@@ -19,6 +19,9 @@ class FieldRepository extends AbstractWritableRepository implements FieldReposit
             'id' => ['required',Rule::unique(PgLaraenquiryCreateTableField::table())->where(function ($query) use($id) {
                 return $query->where('id','!=', $id);
             })],
+            'name' => [Rule::unique(PgLaraenquiryCreateTableField::table())->where(function ($query) use($id) {
+                return $query->where('id','!=', $id);
+            })],
         ];
     }
     //*/

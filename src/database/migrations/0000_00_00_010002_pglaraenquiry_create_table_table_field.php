@@ -26,7 +26,7 @@ class PgLaraenquiryCreateTableTableField extends PgLaraenquiryMigration
     {
         Schema::create(self::table(), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->integer('max_records');
             $table->string('description')->nullable();
             $table->integer('field_id')->index();
